@@ -39,6 +39,9 @@
     "hackathon-e2e": {
       "tags": [],
       "implicitDependencies": ["hackathon"]
+    },
+    "shared": {
+      "tags": []
     }
   }
 }
