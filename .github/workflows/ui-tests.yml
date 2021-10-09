@@ -84,4 +84,4 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           #working-directory: apps/hackathon-e2e
-          start: yarn start
+          start: yarn e2e
