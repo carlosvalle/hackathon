@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@hackathon/patterns": ["libs/patterns/src/index.ts"],
       "@hackathon/shared": ["libs/shared/src/index.ts"]
     }
   },

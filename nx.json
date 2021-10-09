@@ -40,6 +40,9 @@
       "tags": [],
       "implicitDependencies": ["hackathon"]
     },
+    "patterns": {
+      "tags": []
+    },
     "shared": {
       "tags": []
     },
