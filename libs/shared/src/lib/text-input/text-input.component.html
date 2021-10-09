@@ -1,0 +1,37 @@
+<div class="usa-form-group usa-form-group--error">
+  <label
+    class="usa-label"
+    [for]="password ? 'password-sign-in' : 'input-type-text'"
+    id="input-label"
+    [class.usa-label--error]="errorMessage"
+    >{{ label }}</label
+  >
+  <span *ngIf="errorMessage" class="usa-error-message" id="input-error-message">
+    {{ errorMessage }}
+  </span>
+  <input
+    class="usa-input"
+    [class.usa-focus]="focus"
+    [class.usa-input--error]="errorMessage"
+    [class.usa-input--success]="success"
+    [id]="password ? 'password-sign-in' : 'input-type-text'"
+    [name]="password ? 'password' : 'input-type-text'"
+    [type]="password ? 'password' : 'text'"
+    [attr.aria-describedby]="
+      errorMessage ? 'input-error-message' : 'input-label'
+    "
+  />
+  <p *ngIf="password" class="usa-form__note">
+    <a
+      title="Show password"
+      href="javascript:void()"
+      class="usa-show-password"
+      aria-controls="password-sign-in"
+      data-show-text="Show password"
+      data-hide-text="Hide password"
+      aria-pressed="true"
+    >
+      Show password
+    </a>
+  </p>
+</div>
