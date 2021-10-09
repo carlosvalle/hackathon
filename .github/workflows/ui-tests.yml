@@ -83,5 +83,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          working-directory: apps/hackathon-e2e
+          #working-directory: apps/hackathon-e2e
           start: yarn e2e
