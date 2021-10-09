@@ -84,4 +84,4 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           #working-directory: apps/hackathon-e2e
-          start: npm start
+          project: ./apps/hackathon-e2e
