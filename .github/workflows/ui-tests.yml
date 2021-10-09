@@ -80,10 +80,12 @@ jobs:
           key: ${{ runner.os }}-yarn-v1-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-v1
-      - name: Start server in the background
-        run: npm start &
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
+          start: npm start
           wait-on: 'http://localhost:4200'
           project: ./apps/hackathon-e2e
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
