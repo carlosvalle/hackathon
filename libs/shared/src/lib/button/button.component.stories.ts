@@ -2,7 +2,7 @@ import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
 
 export default {
-  title: 'ButtonComponent',
+  title: 'Components/Button',
   component: ButtonComponent,
   decorators: [
     moduleMetadata({
@@ -19,4 +19,5 @@ const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
+  label: 'Button'
 }
