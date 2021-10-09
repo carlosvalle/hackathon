@@ -99,7 +99,8 @@
             "port": 4400,
             "config": {
               "configFolder": "apps/hackathon/.storybook"
-            }
+            },
+            "staticDir": ["apps/hackathon/src/assets"]
           },
           "configurations": {
             "ci": {
@@ -152,6 +153,47 @@
         }
       }
     },
+    "patterns": {
+      "projectType": "library",
+      "root": "libs/patterns",
+      "sourceRoot": "libs/patterns/src",
+      "prefix": "hackathon",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/patterns"],
+          "options": {
+            "project": "libs/patterns/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/patterns/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/patterns/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/patterns"],
+          "options": {
+            "jestConfig": "libs/patterns/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/patterns/src/**/*.ts",
+              "libs/patterns/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared": {
       "projectType": "library",
       "root": "libs/shared",
@@ -198,7 +240,8 @@
             "port": 4400,
             "config": {
               "configFolder": "libs/shared/.storybook"
-            }
+            },
+            "staticDir": ["public"]
           },
           "configurations": {
             "ci": {
