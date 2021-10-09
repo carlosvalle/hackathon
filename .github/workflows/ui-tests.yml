@@ -83,6 +83,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          #working-directory: apps/hackathon-e2e
-          config-file: apps/hackathon-e2e/cypress.json
           start: npm start
+          project: ./apps/hackathon-e2e
