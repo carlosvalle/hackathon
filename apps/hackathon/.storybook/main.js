@@ -9,6 +9,10 @@ module.exports = {
     ...rootMain.stories,
     '../src/app/**/*.stories.mdx',
     '../src/app/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../../libs/shared/src/lib/**/*.stories.mdx',
+    '../../../libs/shared/src/lib/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../../libs/patterns/src/lib/**/*.stories.mdx',
+    '../../../libs/patterns/src/lib/**/*.stories.@(js|jsx|ts|tsx)'
   ],
   addons: [...rootMain.addons],
   webpackFinal: async (config, { configType }) => {
