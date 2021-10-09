@@ -85,3 +85,4 @@ jobs:
         with:
           #working-directory: apps/hackathon-e2e
           project: ./apps/hackathon-e2e
+          start: npm start
