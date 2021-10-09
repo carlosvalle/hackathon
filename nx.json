@@ -45,10 +45,6 @@
     },
     "shared": {
       "tags": []
-    },
-    "shared-e2e": {
-      "tags": [],
-      "implicitDependencies": ["shared"]
     }
   }
 }
