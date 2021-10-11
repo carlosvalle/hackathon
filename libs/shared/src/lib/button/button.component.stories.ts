@@ -21,3 +21,9 @@ export const Primary = Template.bind({});
 Primary.args = {
   label: 'Button'
 }
+
+export const Hover = Template.bind({});
+Hover.args = {
+  label: 'Button',
+  classes: 'usa-button--hover'
+}
