@@ -1,4 +1,4 @@
-<div class="usa-form-group usa-form-group--error">
+<div [class.usa-form-group]="errorMessage" [class.usa-form-group--error]="errorMessage">
   <label
     class="usa-label"
     [for]="password ? 'password-sign-in' : 'input-type-text'"

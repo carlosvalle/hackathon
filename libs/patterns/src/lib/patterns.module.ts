@@ -6,5 +6,6 @@ import { SharedModule } from '@hackathon/shared';
 @NgModule({
   imports: [CommonModule, SharedModule],
   declarations: [SignInComponent],
+  exports: [SignInComponent]
 })
 export class PatternsModule {}

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SignInRoutingModule } from './sign-in-routing.module';
 import { SignInComponent } from './sign-in.component';
-
+import { PatternsModule } from '@hackathon/patterns';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { SignInComponent } from './sign-in.component';
   ],
   imports: [
     CommonModule,
-    SignInRoutingModule
+    SignInRoutingModule,
+    PatternsModule
   ]
 })
 export class SignInModule { }
